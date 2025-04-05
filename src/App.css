@@ -1,6 +1,17 @@
-.App {
-  text-align: center;
+.app {
+  height: 100%;
+  background-color: white; /* Ensure the background is white */
 }
+
+.App-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000; /* Ensure it stays above other content */
+    background-color: white; /* Optional: Set a background color */
+}
+
 
 .App-logo {
   height: 40vmin;
@@ -16,7 +27,6 @@
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
