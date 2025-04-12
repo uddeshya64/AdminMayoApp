@@ -1,11 +1,11 @@
 import React, { useState } from "react"
 import { useNavigate, useLocation } from "react-router-dom"
 import Wrapper from "./style"
-import home from "./home.png"
-import student from "./student.png"
-import acList from "./acList.png"
-import loList from "./loList.png"
-import roList from "./roList.png"
+import home from "../../assets/home.png"
+import student from "../../assets/student.png"
+import acList from "../../assets/acList.png"
+import loList from "../../assets/loList.png"
+import roList from "../../assets/roList.png"
 
 const BottomTab = () => {
   const navigate = useNavigate();
@@ -38,8 +38,8 @@ const BottomTab = () => {
         </div>
 
         <div 
-          className={`tab ${activeTab === "/" ? "active" : ""}`}
-          onClick={() => handleTabClick("/")}
+          className={`tab ${activeTab === "/home" ? "active" : ""}`}
+          onClick={() => handleTabClick("/home")}
         >
           <img src={home} alt="Home" />
           <span>Home</span>

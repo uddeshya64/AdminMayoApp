@@ -1,13 +1,12 @@
 import React, { useState } from "react"; 
-import backArrow from "../PushNotification/backArrow.png";
-import userIcon from "./user.png";
+import backArrow from "../../assets/backArrow.png";
+import userIcon from "../../assets/user.png";
 import { FaPlus } from "react-icons/fa";
-import TeacherModal from './TeacherModal/index.jsx'; // Import the modal component
+import TeacherModal from './TeacherModal/index.jsx'; 
 import Wrapper from "./style";
 import { useNavigate } from "react-router";
 
 const TeacherList = () => {
-  // Teacher data function moved inside the component
   const teachersData = [
     {
       name: "Ms Kavya Goyal",
@@ -16,7 +15,7 @@ const TeacherList = () => {
       role: "Class Teacher",
       contact: "1234567890",
       email: "kavyagoyal@gmail.com",
-      avatar: require('./kavya.png'),
+      avatar: require('../../assets/kavya.png'),
     },
     {
       name: "Mr Rahul Sharma",
@@ -25,8 +24,80 @@ const TeacherList = () => {
       role: "Subject Teacher",
       contact: "9876543210",
       email: "rahulsharma@gmail.com",
-      avatar: require('./kavya.png'),
-    },
+      avatar: require('../../assets/kavya.png'),
+    },    {
+        name: "Mr Rahul Sharma",
+        classes: "III, IV",
+        subjects: ["Science", "Maths"],
+        role: "Subject Teacher",
+        contact: "9876543210",
+        email: "rahulsharma@gmail.com",
+        avatar: require('../../assets/kavya.png'),
+      },    {
+        name: "Mr Rahul Sharma",
+        classes: "III, IV",
+        subjects: ["Science", "Maths"],
+        role: "Subject Teacher",
+        contact: "9876543210",
+        email: "rahulsharma@gmail.com",
+        avatar: require('../../assets/kavya.png'),
+      },    {
+        name: "Mr Rahul Sharma",
+        classes: "III, IV",
+        subjects: ["Science", "Maths"],
+        role: "Subject Teacher",
+        contact: "9876543210",
+        email: "rahulsharma@gmail.com",
+        avatar: require('../../assets/kavya.png'),
+      },    {
+        name: "Mr Rahul Sharma",
+        classes: "III, IV",
+        subjects: ["Science", "Maths"],
+        role: "Subject Teacher",
+        contact: "9876543210",
+        email: "rahulsharma@gmail.com",
+        avatar: require('../../assets/kavya.png'),
+      },    {
+        name: "Mr Rahul Sharma",
+        classes: "III, IV",
+        subjects: ["Science", "Maths"],
+        role: "Subject Teacher",
+        contact: "9876543210",
+        email: "rahulsharma@gmail.com",
+        avatar: require('../../assets/kavya.png'),
+      },    {
+        name: "Mr Rahul Sharma",
+        classes: "III, IV",
+        subjects: ["Science", "Maths"],
+        role: "Subject Teacher",
+        contact: "9876543210",
+        email: "rahulsharma@gmail.com",
+        avatar: require('../../assets/kavya.png'),
+      },    {
+        name: "Mr Rahul Sharma",
+        classes: "III, IV",
+        subjects: ["Science", "Maths"],
+        role: "Subject Teacher",
+        contact: "9876543210",
+        email: "rahulsharma@gmail.com",
+        avatar: require('../../assets/kavya.png'),
+      },    {
+        name: "Mr Rahul Sharma",
+        classes: "III, IV",
+        subjects: ["Science", "Maths"],
+        role: "Subject Teacher",
+        contact: "9876543210",
+        email: "rahulsharma@gmail.com",
+        avatar: require('../../assets/kavya.png'),
+      },    {
+        name: "Mr Rahul Sharma",
+        classes: "III, IV",
+        subjects: ["Science", "Maths"],
+        role: "Subject Teacher",
+        contact: "9876543210",
+        email: "rahulsharma@gmail.com",
+        avatar: require('../../assets/kavya.png'),
+      },
     {
       name: "Ms Priya Verma",
       classes: "V, VI",
@@ -34,7 +105,7 @@ const TeacherList = () => {
       role: "Class Teacher",
       contact: "7890123456",
       email: "priyaverma@gmail.com",
-      avatar: require('./kavya.png'),
+      avatar: require('../../assets/kavya.png'),
     }
     // Add more teachers as needed
   ];
@@ -74,13 +145,13 @@ const TeacherList = () => {
     <Wrapper>
       <div className="app">
         <header className="header">
-          <img src={backArrow} alt="BackArrow" className="icon" onClick={() => {handleNavigation("/")}}/>
+          <img src={backArrow} alt="BackArrow" className="icon" onClick={() => {handleNavigation(-1)}}/>
           <div className="active-users">
             <button className="active-user-button">
-              <img src={require('./kavya.png')} alt="User 1" className="active-user" />
+              <img src={require('../../assets/kavya.png')} alt="User 1" className="active-user" />
             </button>
             <button className="active-user-button">
-              <img src={require('./kavya.png')} alt="User 2" className="active-user" />
+              <img src={require('../../assets/kavya.png')} alt="User 2" className="active-user" />
             </button>
           </div>
           <img src={userIcon} alt="User" className="icon" />

@@ -1,8 +1,10 @@
 import React, { useState } from "react"; 
-import hamburgerIcon from "../Home/hamburger.png";
-import userIcon from "../TeacherList/user.png";
+import hamburgerIcon from "../../assets/hamburger.png";
+import userIcon from "../../assets/user.png";
 import { FaPlus } from "react-icons/fa";
 import Wrapper from "./style";
+import { useLocation, useNavigate } from "react-router";
+import Menu from "../Menu";
 
 
 const Students = () => {
@@ -11,43 +13,43 @@ const Students = () => {
     return [
       {
         name: "Kavya Goyal",
-        avatar: require('../TeacherList/kavya.png'), 
+        avatar: require('../../assets/kavya.png'), 
       },
       {
         name: "Rahul Sharma",
-        avatar: require('../TeacherList/kavya.png'),
+        avatar: require('../../assets/kavya.png'),
       },
       {
         name: "Priya Verma",
-        avatar: require('../TeacherList/kavya.png'),
+        avatar: require('../../assets/kavya.png'),
       },
       {
         name: "Aman Gupta",
-        avatar: require('../TeacherList/kavya.png'),
+        avatar: require('../../assets/kavya.png'),
       },
       {
         name: "Neha Singh",
-        avatar: require('../TeacherList/kavya.png'),
+        avatar: require('../../assets/kavya.png'),
       },
       {
         name: "Rohit Mehta",
-        avatar: require('../TeacherList/kavya.png'),
+        avatar: require('../../assets/kavya.png'),
       },
       {
         name: "Anjali Kapoor",
-        avatar: require('../TeacherList/kavya.png'),
+        avatar: require('../../assets/kavya.png'),
       },
       {
         name: "Suresh Yadav",
-        avatar: require('../TeacherList/kavya.png'),
+        avatar: require('../../assets/kavya.png'),
       },
       {
         name: "Ritu Jain",
-        avatar: require('../TeacherList/kavya.png'),
+        avatar: require('../../assets/kavya.png'),
       },
       {
         name: "Vikram Das",
-        avatar: require('../TeacherList/kavya.png'),
+        avatar: require('../../assets/kavya.png'),
       }
     ];
   };
@@ -62,7 +64,6 @@ const Students = () => {
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // Filtered students based on selected filters
   const filteredStudents = students.filter(student => {
     const matchesClass = selectedClass ? student.classes?.includes(selectedClass) : true;
     return matchesClass;
@@ -78,7 +79,7 @@ const Students = () => {
     <div className="app">
       {/* Header */}
       <header className="header">
-        <img src={hamburgerIcon} alt="Menu" className="icon" />
+        <Menu />
         <img src={userIcon} alt="User" className="icon" />
       </header>
       <h2 className="student-list-heading">Student’s List</h2>

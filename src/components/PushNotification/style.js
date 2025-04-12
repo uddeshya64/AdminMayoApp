@@ -1,8 +1,15 @@
 import styled from "styled-components";
 
 const Wrapper = styled.section`
-width : 100vw;
-height : 100vh;
+  height: 100vh;
+  width: 100vw;
+
+.cover{
+    width : 100vw;
+    height : 100vh;
+    display: flex;
+    flex-direction: column;
+}
 .header{
     img{
         width :20px;
@@ -16,8 +23,8 @@ height : 100vh;
 }
 .section{
     width : 100vw;
+    min-height: calc(100vh - 100px);
     background : white;
-    min-height : 75vh;
     border-radius : 30px;
     h2{
         padding : 30px 0 0 25px;

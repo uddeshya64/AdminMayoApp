@@ -1,6 +1,6 @@
 import React from 'react'
 import Wrapper from './style'
-import backArrow from './backArrow.png'
+import backArrow from '../../assets/backArrow.png'
 import { useNavigate } from 'react-router'
 
 const PushNotification = () => {
@@ -8,7 +8,7 @@ const PushNotification = () => {
   const navigate = useNavigate()
 
   const handleChange = () => {
-    navigate("/")
+    navigate(-1)
   }
 
   return (

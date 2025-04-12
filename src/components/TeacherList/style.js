@@ -81,7 +81,7 @@ const Wrapper = styled.section`
 
 /* Teacher List Container */
 .container {
-   min-height: 100vh; /* Ensure the container occupies at least full screen height */
+   min-height: 65vh; /* Ensure the container occupies at least full screen height */
   max-height: calc(100vh - 180px); /* Set a maximum height based on viewport height, accounting for header */
   @media (max-width: 768px) {
     max-height: 80vh; /* Set a maximum height for smaller screens */
